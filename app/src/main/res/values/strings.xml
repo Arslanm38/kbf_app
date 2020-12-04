@@ -1,3 +1,23 @@
 <resources>
+
+    <!-- Laurence Brenner -->
+
+    <!-- Login Screen Strings (Fahrer / Unternehmen) -->
+
     <string name="app_name">KBF App</string>
+    <string name="Registrierung">Noch kein Mitglied ? Registrieren Sie sich !</string>
+    <string name="Login">Anmelden</string>
+    <string name="Username">Username</string>
+    <string name="Passwort">Passwort</string>
+
+
+    <!-- /Laurence Brenner -->
+
+
+
+
+
+
+
+
 </resources>
