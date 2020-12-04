@@ -2,6 +2,8 @@
 
     <!-- Laurence Brenner -->
 
+    <string name="Test">Testing</string>
+
     <!-- Login Screen Strings (Fahrer / Unternehmen) -->
 
     <string name="app_name">KBF App</string>
