@@ -1,10 +1,8 @@
 package de.hsh.f4.mc.kbfapp;
 
-// Laurence Brenner
+import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
-
-import android.os.Bundle;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
