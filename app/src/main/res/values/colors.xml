@@ -3,13 +3,25 @@
 <!-- Laurence Brenner -->
 
 <resources>
-    <color name="Weiß">     #FFFFFFFF</color>
-    <color name="Schwarz">  #FF000000</color>
-    <color name="Orange">   #FF9800</color>
 
-    <!-- /Laurence Brenner -->
+    <!-- Allgemein -->
 
+    <color name="White">        #FFFFFF</color>
+    <color name="Black">        #FF000000</color>
+    <color name="Orange">       #FF9800</color>
+    <color name="Yellow">       #F2DC13</color>
+    <color name="Red">          #FF5252</color>
+    <color name="DarkGrey">     #212121</color>
+    <color name="Green">        #32CD32</color>
+    <color name="Grey">         #BFBFBF</color>
 
+    <!-- Unternehmerstartseite -->
 
+    <color name="RedOrange">    #F44336</color>
+    <color name="SkyBlue">      #2196F3</color>
+    <color name="BlueGreen">    #009688</color>
+    <color name="RedPink">      #E91E63</color>
+    <color name="Purple">       #9C27B0</color>
+    <color name="LightGreen">   #24C81F</color>
 
 </resources>

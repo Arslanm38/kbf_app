@@ -2,24 +2,68 @@
 
     <!-- Laurence Brenner -->
 
-    <string name="Test">Testing</string>
-
-    <!-- Login Screen Strings (Fahrer / Unternehmen) -->
-
     <string name="app_name">KBF App</string>
-    <string name="Registrierung">Noch kein Mitglied ? Registrieren Sie sich !</string>
-    <string name="Login">Anmelden</string>
+
+    <!-- Allgemein (mehrmal benutzt) -->
+
+    <string name="Einstellungen">Einstellungen</string>
+
+    <!-- Login Screen Strings (Fahrer / Unternehmen / Registrierung) -->
+
+    <string name="UnternehmerLogin">Unternehmer-Login</string>
+    <string name="FahrerLogin">Fahrer-Login</string>
+    <string name="Anmelden">Anmelden</string>
     <string name="Username">Username</string>
     <string name="Passwort">Passwort</string>
+    <string name="RegistrierungAnfrage">Noch kein Mitglied ? Registrieren Sie sich !</string>
 
+    <string name="Registrierung">Registrierung</string>
+    <string name="Reg_VorUndNachname">Vor- und Nachname</string>
+    <string name="Reg_StraßeHausnummer">Straße (mit Hausnummer)</string>
+    <string name="Reg_Postleitzahl">Postleitzahl</string>
+    <string name="Reg_PasswortBestaetigen">Passwort bestätigen</string>
+    <string name="Registrieren">Registrieren</string>
+    <string name="backToLogin">Schon Mitglied ? Loggen Sie sich ein</string>
 
-    <!-- /Laurence Brenner -->
+    <!-- Unternehmerstartseite -->
 
+    <string name="Fahrten">Fahrten</string>
+    <string name="Mitarbeiteransicht">Mitarbeiteransicht</string>
+    <string name="Fahrerkonten">Fahrerkonten</string>
+    <string name="Rechnungen">Rechnungen</string>
+    <string name="Archiv">Archiv</string>
 
+    <!-- Fragmente -->
 
+    <string name="Fahrer">Fahrer</string>
+    <string name="NeueFahrt">Neue Fahrt</string>
+    <string name="MeineFahrten">Meine Fahrten</string>
+    <string name="Kontakt">Kontakt</string>
+    <string name="Hilfe_Faq">Hilfe / FAQ</string>
+    <string name="Impressum">Impressum</string>
+    <string name="Info">Info</string>
+    <string name="Sonstiges">Sonstiges</string>
+    <string name="Navigation">Navigation</string>
+    <string name="Krankenbefoerderung">Krankenbeförderung</string>
 
+    <!-- Temp -->
 
+    <string name="fahrer_muhammed_arslan">Fahrer: Muhammed Arslan</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Test">Testing</string>
+    <string name="SidebarTest">SidebarTesting</string>
 
+    <!-- Placeholder (ersetzen durch loginabhängige Daten) -->
+
+    <!-- Konto Fahrer -->
+    <string name="konto_fahrer_name">Muhammed Arslan</string>
+    <string name="konto_fahrer_unternehmensname">Hallo Taxi</string>
+    <string name="konto_fahrer_nummer">#3811</string>
+
+    <!-- Konto Unternehmer -->
+    <string name="konto_unternehmer_name">Max Mustermann</string>
+    <string name="konto_unternehmer_unternehmensname">Hallo Taxi</string>
+    <string name="title_activity_fahrer_startseite">Map</string>
 
 
 </resources>

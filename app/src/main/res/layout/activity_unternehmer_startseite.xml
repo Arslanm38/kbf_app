@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!-- Erstellt von David Medic-->
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -16,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/unternehmer" />
+        app:srcCompat="@drawable/photo_profile_unternehmer" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -24,11 +26,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:clickable="true"
-        app:backgroundTint="#FF5722"
+        app:backgroundTint="@color/RedOrange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/plus" />
+        app:srcCompat="@drawable/ic_button_plus" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -53,7 +55,7 @@
                 android:layout_height="120dp"
                 android:layout_marginRight="6dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#2196F3"
+                app:cardBackgroundColor="@color/SkyBlue"
                 app:cardCornerRadius="6dp"
                 app:cardMaxElevation="6dp">
 
@@ -65,7 +67,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/fahrten" />
+                        android:src="@drawable/ic_u_fahrten" />
 
                 </RelativeLayout>
 
@@ -75,8 +77,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
                     android:padding="6dp"
-                    android:text="Fahrten"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/Fahrten"
+                    android:textColor="@color/White" />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -85,7 +87,7 @@
                 android:layout_marginLeft="6dp"
                 android:layout_weight="1"
                 android:onClick="oeffneMitarbeiter"
-                app:cardBackgroundColor="#009688"
+                app:cardBackgroundColor="@color/BlueGreen"
                 app:cardCornerRadius="6dp"
                 app:cardMaxElevation="6dp">
 
@@ -97,7 +99,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/mitarbeiter" />
+                        android:src="@drawable/ic_u_mitarbeiter" />
 
                 </RelativeLayout>
 
@@ -107,9 +109,10 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
                     android:padding="6dp"
-                    android:text="Mitarbeiteransicht"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/Mitarbeiteransicht"
+                    android:textColor="@color/White" />
             </androidx.cardview.widget.CardView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -124,7 +127,7 @@
                 android:layout_height="120dp"
                 android:layout_marginRight="6dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#E91E63"
+                app:cardBackgroundColor="@color/RedPink"
                 app:cardCornerRadius="6dp"
                 app:cardMaxElevation="6dp">
 
@@ -136,7 +139,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/fahrerkonten" />
+                        android:src="@drawable/ic_u_fahrerkonten" />
 
                 </RelativeLayout>
 
@@ -147,7 +150,8 @@
                     android:fontFamily="@font/montserrat_bold"
                     android:padding="6dp"
                     android:text="Fahrerkonten"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="@color/White" />
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -155,7 +159,7 @@
                 android:layout_height="120dp"
                 android:layout_marginLeft="6dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#9C27B0"
+                app:cardBackgroundColor="@color/Purple"
                 app:cardCornerRadius="6dp"
                 app:cardMaxElevation="6dp">
 
@@ -167,7 +171,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/rechnung" />
+                        android:src="@drawable/ic_u_rechnungen" />
 
                 </RelativeLayout>
 
@@ -177,10 +181,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
                     android:padding="6dp"
-                    android:text="Rechnungen"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/Rechnungen"
+                    android:textColor="@color/White" />
             </androidx.cardview.widget.CardView>
-
 
         </LinearLayout>
 
@@ -196,7 +199,7 @@
                 android:layout_height="120dp"
                 android:layout_marginRight="6dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#F44336"
+                app:cardBackgroundColor="@color/RedOrange"
                 app:cardCornerRadius="6dp"
                 app:cardMaxElevation="6dp">
 
@@ -208,7 +211,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/archiv" />
+                        android:src="@drawable/ic_u_archiv" />
 
                 </RelativeLayout>
 
@@ -218,8 +221,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
                     android:padding="6dp"
-                    android:text="Archiv"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/Archiv"
+                    android:textColor="@color/White" />
+
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
@@ -227,7 +231,7 @@
                 android:layout_height="120dp"
                 android:layout_marginRight="6dp"
                 android:layout_weight="1"
-                app:cardBackgroundColor="#24C81F"
+                app:cardBackgroundColor="@color/LightGreen"
                 app:cardCornerRadius="6dp"
                 app:cardMaxElevation="6dp">
 
@@ -239,7 +243,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/einstellungen" />
+                        android:src="@drawable/ic_u_einstellungen" />
 
                 </RelativeLayout>
 
@@ -249,15 +253,12 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
                     android:padding="6dp"
-                    android:text="Einstellungen"
-                    android:textColor="#FFFFFF" />
+                    android:text="@string/Einstellungen"
+                    android:textColor="@color/White" />
+
             </androidx.cardview.widget.CardView>
 
-
-
-
         </LinearLayout>
-
 
     </LinearLayout>
 
@@ -268,12 +269,13 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="200dp"
         android:fontFamily="@font/montserrat_bold"
-        android:text="Max Mustermann"
-        android:textColor="#FFFFFF"
+        android:text="@string/konto_unternehmer_name"
+        android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.023"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="200dp" />
 
     <TextView
         android:id="@+id/textView9"
@@ -281,11 +283,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="270dp"
         android:fontFamily="@font/montserrat"
-        android:text="Taxiunternehmer"
-        android:textColor="#FFFFFF"
+        android:text="@string/konto_unternehmer_unternehmensname"
+        android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:layout_marginRight="270dp" />
 
-    <!-- Erstellt von David Medic-->
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(MainActivity.this, UnternehmerStartseite.class));
     }
 
-
     public void wechsleFahrerLogin(View view) {
         startActivity(new Intent(MainActivity.this, FahrerLogin.class));
     }

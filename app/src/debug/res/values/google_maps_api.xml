@@ -1,7 +1,5 @@
-<!-- Laurence Brenner -->
-
 <resources>
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD3QQ-ynYFlDtr3HK1yzkGzucChk_EvC7U</string>
-</resources>
 
-<!-- /Laurence Brenner -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCGZevklAwdtvMLjkY_PnKlfNOQLL_Djuc</string>
+
+</resources>

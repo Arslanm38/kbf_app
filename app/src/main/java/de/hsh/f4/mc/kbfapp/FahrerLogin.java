@@ -36,6 +36,12 @@ public class FahrerLogin extends AppCompatActivity {
         finish();
     }
 
+    public void oeffneSidebarTest(View view) {
+        startActivity(new Intent(FahrerLogin.this, SidebarTest.class));
+    }
+
+
+
     /* /Erstellt von David Medic*/
 
 
