@@ -2,12 +2,12 @@
 
     <style name="Theme.KBFApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
-        <item name="colorPrimary">@color/Weiß</item>
-        <item name="colorPrimaryVariant">@color/Schwarz</item>
+        <item name="colorPrimary">@color/White</item>
+        <item name="colorPrimaryVariant">@color/Black</item>
         <item name="colorOnPrimary">@color/Orange</item>
 
-        <item name="colorSecondary">@color/Weiß</item>
-        <item name="colorSecondaryVariant">@color/Schwarz</item>
+        <item name="colorSecondary">@color/White</item>
+        <item name="colorSecondaryVariant">@color/Black</item>
         <item name="colorOnSecondary">@color/Orange</item>
 
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>

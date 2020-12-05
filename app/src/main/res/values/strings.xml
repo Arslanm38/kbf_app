@@ -2,24 +2,37 @@
 
     <!-- Laurence Brenner -->
 
-    <string name="Test">Testing</string>
+    <string name="app_name">KBF App</string>
 
     <!-- Login Screen Strings (Fahrer / Unternehmen) -->
 
-    <string name="app_name">KBF App</string>
     <string name="Registrierung">Noch kein Mitglied ? Registrieren Sie sich !</string>
     <string name="Login">Anmelden</string>
     <string name="Username">Username</string>
     <string name="Passwort">Passwort</string>
 
+    <!-- Fragmente -->
 
-    <!-- /Laurence Brenner -->
+    <string name="Fahrer">Fahrer</string>
+    <string name="NeueFahrt">Neue Fahrt</string>
+    <string name="MeineFahrten">Meine Fahrten</string>
+    <string name="Einstellungen">Einstellungen</string>
+    <string name="Kontakt">Kontakt</string>
+    <string name="Hilfe_Faq">Hilfe / FAQ</string>
+    <string name="Impressum">Impressum</string>
+    <string name="Info">Info</string>
+    <string name="Sonstiges">Sonstiges</string>
+    <string name="Navigation">Navigation</string>
+    <string name="Krankenbefoerderung">Krankenbeförderung</string>
 
+    <!-- Temp -->
 
-
-
-
-
+    <string name="kbfapp">KBFAPP</string>
+    <string name="fahrer_muhammed_arslan">Fahrer: Muhammed Arslan</string>
+    <string name="muhammed_arslan">Muhammed Arslan</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Test">Testing</string>
+    <string name="SidebarTest">SidebarTesting</string>
 
 
 </resources>

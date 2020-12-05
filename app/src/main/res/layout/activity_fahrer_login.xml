@@ -16,7 +16,7 @@
         android:fontFamily="@font/montserrat"
         android:onClick="oeffneRegistrierung"
         android:text="@string/Registrierung"
-        android:textColor="@color/Weiß"
+        android:textColor="@color/White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -28,7 +28,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/Weiß"
+        android:backgroundTint="@color/White"
         android:fontFamily="@font/montserrat"
         android:onClick="oeffneUnternehmerStartseite"
         android:text="@string/Login"
@@ -54,7 +54,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/Weiß"
+            android:background="@color/White"
             android:orientation="vertical">
 
             <EditText
@@ -121,10 +121,20 @@
         android:id="@+id/buttonLaurenceTest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Test"
         android:onClick="oeffneFahrerStartseite"
+        android:text="@string/Test"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLaurenceTest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="oeffneSidebarTest"
+        android:text="@string/SidebarTest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLaurenceTest" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuProfile">
+
+    <!-- Arslan -->
+
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="de.hsh.f4.mc.kbfapp.FahrerFragment"
+        android:label="Fahrer"
+        tools:layout="@layout/fragment_fahrer" />
+    <fragment
+        android:id="@+id/menuNeueFahrt"
+        android:name="de.hsh.f4.mc.kbfapp.NeueFahrtFragment"
+        android:label="Neue Fahrt"
+        tools:layout="@layout/fragment_neue_fahrt" />
+    <fragment
+        android:id="@+id/menuEinstellungen"
+        android:name="de.hsh.f4.mc.kbfapp.EinstellungenFragment"
+        android:label="Einstellungen"
+        tools:layout="@layout/fragment_einstellungen" />
+    <fragment
+        android:id="@+id/menuHilfe"
+        android:name="de.hsh.f4.mc.kbfapp.HilfeFragment"
+        android:label="Hilfe/FAQ"
+        tools:layout="@layout/fragment_hilfe" />
+    <fragment
+        android:id="@+id/menuKontakt"
+        android:name="de.hsh.f4.mc.kbfapp.KontaktFragment"
+        android:label="Kontakt"
+        tools:layout="@layout/fragment_kontakt" />
+    <fragment
+        android:id="@+id/menuMeineFahrten"
+        android:name="de.hsh.f4.mc.kbfapp.LetztenFahrtenFragment"
+        android:label="Meine Fahrten"
+        tools:layout="@layout/fragment_letzten_fahrten" />
+    <fragment
+        android:id="@+id/menuNavi"
+        android:name="de.hsh.f4.mc.kbfapp.NaviFragment"
+        android:label="Navigation"
+        tools:layout="@layout/fragment_navi" />
+</navigation>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Arslan -->
+
+    <item
+        android:id="@+id/menuProfile"
+        android:icon="@drawable/ic_person"
+        android:title="@string/Fahrer" />
+    <item
+        android:id="@+id/menuNeueFahrt"
+        android:icon="@drawable/ic_taxi"
+        android:title="@string/NeueFahrt" />
+
+    <item
+        android:id="@+id/menuNavi"
+        android:icon="@drawable/ic_navigation"
+        android:title="@string/Navigation" />
+
+
+    <item
+        android:id="@+id/menuMeineFahrten"
+        android:icon="@drawable/ic_folder"
+        android:title="@string/MeineFahrten" />
+
+    <item android:title="@string/Sonstiges">
+
+        <menu>
+
+
+            <item
+                android:id="@+id/menuEinstellungen"
+                android:icon="@drawable/ic_settings"
+                android:title="@string/Einstellungen" />
+            <item
+                android:id="@+id/menuKontakt"
+                android:icon="@drawable/ic_phone"
+                android:title="@string/Kontakt" />
+            <item
+                android:id="@+id/menuHilfe"
+                android:icon="@drawable/ic_help"
+                android:title="@string/Hilfe_Faq" />
+
+
+        </menu>
+
+    </item>
+
+</menu>

@@ -3,12 +3,13 @@
 <!-- Laurence Brenner -->
 
 <resources>
-    <color name="Weiß">     #FFFFFFFF</color>
-    <color name="Schwarz">  #FF000000</color>
+    <color name="White">     #FFFFFFFF</color>
+    <color name="Black">  #FF000000</color>
     <color name="Orange">   #FF9800</color>
-
-    <!-- /Laurence Brenner -->
-
+    <color name="Yellow">#FFEB3B</color>
+    <color name="Red">#FF5252</color>
+    <color name="DarkGrey">#212121</color>
+    <color name="Green">#32CD32</color>
 
 
 
