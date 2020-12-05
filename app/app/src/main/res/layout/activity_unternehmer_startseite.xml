@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/unternehmer" />
+        app:srcCompat="@drawable/photo_profile_unternehmer" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -28,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/plus" />
+        app:srcCompat="@drawable/ic_button_plus" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -65,7 +65,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/fahrten" />
+                        android:src="@drawable/ic_u_fahrten" />
 
                 </RelativeLayout>
 
@@ -97,7 +97,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/mitarbeiter" />
+                        android:src="@drawable/ic_u_mitarbeiter" />
 
                 </RelativeLayout>
 
@@ -136,7 +136,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/fahrerkonten" />
+                        android:src="@drawable/ic_u_fahrerkonten" />
 
                 </RelativeLayout>
 
@@ -167,7 +167,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/rechnung" />
+                        android:src="@drawable/ic_u_rechnungen" />
 
                 </RelativeLayout>
 
@@ -208,7 +208,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/archiv" />
+                        android:src="@drawable/ic_u_archiv" />
 
                 </RelativeLayout>
 
@@ -239,7 +239,7 @@
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/einstellungen" />
+                        android:src="@drawable/ic_u_einstellungen" />
 
                 </RelativeLayout>
 
