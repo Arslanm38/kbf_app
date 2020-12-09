@@ -18,16 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".FahrerStartseite"
-            android:label="@string/title_activity_fahrer_startseite"></activity>
+            android:label="@string/title_activity_fahrer_startseite" />
+
         <activity android:name=".SidebarTest" />
-        <activity android:name=".FahrerLogin" />
         <activity android:name=".Mitarbeiter" />
         <activity android:name=".UnternehmerStartseite" />
         <activity android:name=".Registrierung" />
-
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
