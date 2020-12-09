@@ -17,7 +17,7 @@
         android:layout_marginBottom="64dp"
         android:fontFamily="@font/montserrat"
         android:onClick="oeffneRegistrierung"
-        android:text="@string/Registrierung"
+        android:text="@string/RegistrierungAnfrage"
         android:textColor="@color/White"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
