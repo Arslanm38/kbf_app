@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1077054657570",
+    "project_id": "kbf-app-297715",
+    "storage_bucket": "kbf-app-297715.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077054657570:android:e79c7c37be399269aae67b",
+        "android_client_info": {
+          "package_name": "de.hsh.f4.mc.kbfapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077054657570-j7rn5904r7ugb1mohqoeqc6v3vs0l3ea.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-TaZqF8NZQf2karMmiYRJhDyRwtVE570"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077054657570-j7rn5904r7ugb1mohqoeqc6v3vs0l3ea.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

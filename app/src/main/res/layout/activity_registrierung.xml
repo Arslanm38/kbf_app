@@ -24,14 +24,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonReg"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/montserrat"
-        android:onClick="onRegister"
         android:text="@string/Registrieren"
         android:textColor="@color/Orange"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -48,7 +47,7 @@
         app:cardCornerRadius="4dp"
         app:cardElevation="8dp"
         app:cardMaxElevation="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReg"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
@@ -70,14 +69,14 @@
                 android:padding="12dp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonUsername"
+                android:id="@+id/editTextTextEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
-                android:hint="@string/Username"
-                android:inputType="textPersonName"
+                android:hint="@string/Email"
+                android:inputType="textEmailAddress"
                 android:padding="12dp" />
 
             <EditText
