@@ -50,7 +50,6 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/White"
         android:fontFamily="@font/montserrat"
-        android:onClick="oeffneFahrerStartseite"
         android:text="@string/Anmelden"
         android:textColor="@color/Orange"
         app:layout_constraintBottom_toTopOf="@+id/textView"
@@ -80,18 +79,18 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/editTextTextLoginEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
                 android:ems="10"
                 android:fontFamily="@font/montserrat"
-                android:hint="@string/Username"
-                android:inputType="textPersonName"
+                android:hint="@string/Email"
+                android:inputType="textEmailAddress"
                 android:padding="12dp" />
 
             <EditText
-                android:id="@+id/editTextTextPassword"
+                android:id="@+id/editTextTextLoginPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"

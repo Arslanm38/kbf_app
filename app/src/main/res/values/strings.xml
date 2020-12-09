@@ -13,7 +13,7 @@
     <string name="UnternehmerLogin">Unternehmer-Login</string>
     <string name="FahrerLogin">Fahrer-Login</string>
     <string name="Anmelden">Anmelden</string>
-    <string name="Username">Username</string>
+    <string name="Email">E-Mail</string>
     <string name="Passwort">Passwort</string>
     <string name="RegistrierungAnfrage">Noch kein Mitglied ? Registrieren Sie sich !</string>
 
