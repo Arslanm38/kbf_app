@@ -73,41 +73,82 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        //Login Fahrer
         LoginButtonFahrer.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View v) {
-                 String email = lEmail.getText().toString().trim();
-                 String passwort = lPasswort.getText().toString().trim();
+            @Override
+            public void onClick(View v) {
+                String email = lEmail.getText().toString().trim();
+                String passwort = lPasswort.getText().toString().trim();
 
-                 if (TextUtils.isEmpty(email)) {
-                     lEmail.setError("E-Mail Adresse benötigt");
-                     return;
-                 }
+                if (TextUtils.isEmpty(email)) {
+                    lEmail.setError("E-Mail Adresse benötigt");
+                    return;
+                }
 
-                 if (TextUtils.isEmpty(passwort)) {
-                     lPasswort.setError("Passwort benötigt");
-                     return;
-                 }
+                if (TextUtils.isEmpty(passwort)) {
+                    lPasswort.setError("Passwort benötigt");
+                    return;
+                }
 
-                 if (passwort.length() < 6) {
-                     lPasswort.setError("Password muss mehr als 6 Zeichen haben");
-                 }
+                if (passwort.length() < 6) {
+                    lPasswort.setError("Password muss mehr als 6 Zeichen haben");
+                }
 
-                 // Authenticate User
+                // Authenticate User
 
-                 fAuth.signInWithEmailAndPassword(email,passwort).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                     @Override
-                     public void onComplete(@NonNull Task<AuthResult> task) {
-                         if(task.isSuccessful()) {
-                             Toast.makeText(MainActivity.this, "Anmeldung erfolgreich", Toast.LENGTH_SHORT).show();
-                         }
-                         else {
-                             Toast.makeText(MainActivity.this, "Anmeldung fehlgeschlagen", Toast.LENGTH_SHORT).show();
-                         }
-                     }
-                 });
-             }
-         });
+                fAuth.signInWithEmailAndPassword(email,passwort).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Anmeldung erfolgreich", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, FahrerStartseite.class));
+                        }
+                        else {
+                            Toast.makeText(MainActivity.this, "Anmeldung fehlgeschlagen", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
+
+        //Login Unternehmer
+        LoginButtonUnternehmer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String email = lEmail.getText().toString().trim();
+                String passwort = lPasswort.getText().toString().trim();
+
+                if (TextUtils.isEmpty(email)) {
+                    lEmail.setError("E-Mail Adresse benötigt");
+                    return;
+                }
+
+                if (TextUtils.isEmpty(passwort)) {
+                    lPasswort.setError("Passwort benötigt");
+                    return;
+                }
+
+                if (passwort.length() < 6) {
+                    lPasswort.setError("Password muss mehr als 6 Zeichen haben");
+                }
+
+                // Authenticate User
+
+                fAuth.signInWithEmailAndPassword(email,passwort).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful()) {
+                            Toast.makeText(MainActivity.this, "Anmeldung erfolgreich", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MainActivity.this, UnternehmerStartseite.class));
+                        }
+                        else {
+                            Toast.makeText(MainActivity.this, "Anmeldung fehlgeschlagen", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
     }
 
 
