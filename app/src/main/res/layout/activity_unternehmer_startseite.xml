@@ -24,13 +24,31 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginLeft="300dp"
         android:layout_marginBottom="32dp"
         android:clickable="true"
+        android:onClick="oeffneHilfe"
         app:backgroundTint="@color/RedOrange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_button_plus" />
+        app:srcCompat="@drawable/ic_f_help" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginBottom="32dp"
+        android:clickable="true"
+        android:onClick="oeffneKontakt"
+        app:backgroundTint="@color/RedOrange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_f_telefon" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
