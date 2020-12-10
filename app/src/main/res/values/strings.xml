@@ -24,6 +24,8 @@
     <string name="Reg_PasswortBestaetigen">Passwort bestätigen</string>
     <string name="Registrieren">Registrieren</string>
     <string name="backToLogin">Schon Mitglied ? Loggen Sie sich ein</string>
+    <string name="Unternehmerkonto">Unternehmerkonto</string>
+    <string name="Fahrerkonto">Fahrerkonto</string>
 
     <!-- Unternehmerstartseite -->
 
