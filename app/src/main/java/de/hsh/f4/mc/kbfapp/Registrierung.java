@@ -79,6 +79,10 @@ public class Registrierung extends AppCompatActivity {
                 Boolean isFahrer = rIsFahrer.isChecked();
                 Boolean isUnternehmer = rIsUnternehmer.isChecked();
 
+                if (!(isFahrer || isUnternehmer)) {
+                    Toast.makeText(Registrierung.this, "Bitte Kontotyp angeben", Toast.LENGTH_SHORT).show();
+                }
+
                 if(TextUtils.isEmpty(name)) {
                     rName.setError("Name wird benötigt");
                     return;
@@ -155,7 +159,6 @@ public class Registrierung extends AppCompatActivity {
     }
 
 // /Laurence Brenner
-
 
     /* Erstellt von David Medic*/
 
