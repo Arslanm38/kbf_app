@@ -1,18 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- Muhammed Arslan -->
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Erstellt von David Medic-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    android:background="@drawable/hintergrund"
     tools:context=".KontaktFragment">
 
     <TextView
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/Kontakt"
+        android:textSize="40dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/textrahmen_transparent">
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="An"
+            android:textSize="20sp"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/et_to"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et_subject"
+        android:hint="Betreff"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen_transparent" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_weight="1"
+        android:id="@+id/et_message"
+        android:hint="Nachricht"
+        android:padding="10dp"
+        android:gravity="top"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen_transparent" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/Kontakt"
-        android:layout_gravity="center"
-        android:textSize="20sp" />
+        android:id="@+id/bt_send"
+        android:text="Senden"
+        android:textSize="25sp"
+        android:textColor="@color/RedPink"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen_transparent"/>
 
-</FrameLayout>
+
+</LinearLayout>
+
+    <!-- Erstellt von David Medic-->
