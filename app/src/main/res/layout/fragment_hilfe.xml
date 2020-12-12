@@ -24,6 +24,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/textrahmen"
+        android:onClick="oeffneAGB"
         android:text="AGB"
         android:textColor="#FFFFFF"
         app:backgroundTint="@color/RedPink" />
@@ -31,38 +32,42 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen"
+        android:onClick="oeffneHilfeStandort"
         android:text="Standort"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/textrahmen"
-        app:backgroundTint="@color/RedPink"/>
+        app:backgroundTint="@color/RedPink" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen"
+        android:onClick="oeffneHilfeDauer"
         android:text="Dauer"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/textrahmen"
-        app:backgroundTint="@color/RedPink"/>
+        app:backgroundTint="@color/RedPink" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen"
+        android:onClick="oeffneHilfeZahlung"
         android:text="Zahlungsmöglichkeiten"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/textrahmen"
-        app:backgroundTint="@color/RedPink"/>
+        app:backgroundTint="@color/RedPink" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Konto"
-        android:textColor="#FFFFFF"
         android:layout_marginTop="10dp"
         android:background="@drawable/textrahmen"
-        app:backgroundTint="@color/RedPink"/>
+        android:onClick="oeffneHilfeKonto"
+        android:text="Konto"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/RedPink" />
 
 </LinearLayout>
 

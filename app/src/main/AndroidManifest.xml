@@ -12,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KBFApp">
-        <activity android:name=".HilfeFragment"></activity>
+        <activity android:name=".HilfeFragmentZahlung"></activity>
+        <activity android:name=".HilfeFragmentDauer" />
+        <activity android:name=".HilfeFragmentKonto" />
+        <activity android:name=".HilfeFragmentStandort" />
+        <activity android:name=".HilfeFragmentAGB" />
+        <activity android:name=".HilfeFragment" />
         <activity android:name=".KontaktFragment" />
         <activity android:name=".MainActivity">
             <intent-filter>
