@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
 
+
         //Fahrer / Unternehmer Switch
         LoginSwitch.setOnClickListener(new View.OnClickListener(){
             @Override
