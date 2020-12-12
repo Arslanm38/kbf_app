@@ -170,9 +170,6 @@ public class MainActivity extends AppCompatActivity {
     }
     */
 
-    public void oeffneSidebarTest (View view) {
-        startActivity(new Intent(MainActivity.this, SidebarTest.class));
-    }
 
     // /Laurence Brenner
 
