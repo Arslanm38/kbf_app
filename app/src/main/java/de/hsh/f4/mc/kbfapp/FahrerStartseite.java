@@ -69,11 +69,11 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
                 textViewfUnternehmen = (TextView) findViewById(R.id.textViewfUnternehmen);
                 textViewfUnternehmenNummer = (TextView) findViewById(R.id.textViewfUnternehmenNummer);
 
-                fUnternehmenNummer = "#"+fUnternehmenNummer;
+                fUnternehmenNummer = "#"+ fUnternehmenNummer;
 
                 textViewfName.setText(fName);
                 textViewfUnternehmen.setText(fUnternehmen);
-                textViewfUnternehmenNummer.setText("#" + fUnternehmenNummer);
+                textViewfUnternehmenNummer.setText(fUnternehmenNummer);
             }
         });
 
