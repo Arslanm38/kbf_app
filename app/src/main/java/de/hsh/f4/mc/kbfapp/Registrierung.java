@@ -131,12 +131,12 @@ public class Registrierung extends AppCompatActivity {
 
                             Map<String, Object> user = new HashMap<>();
 
-                            user.put("Name", name);
+                            user.put("NAME", name);
                             user.put("PLZ", plz);
-                            user.put("Straße", strasse);
-                            user.put("E-Mail", email);
-                            user.put("IstUnternehmer", isUnternehmer);
-                            user.put("IstFahrer", isFahrer);
+                            user.put("STRASSE", strasse);
+                            user.put("EMAIL", email);
+                            user.put("ISTUNTERNEHMER", isUnternehmer);
+                            user.put("ISTFAHRER", isFahrer);
 
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override

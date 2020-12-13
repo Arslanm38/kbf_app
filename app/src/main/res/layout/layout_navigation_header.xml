@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="@id/imageProfile"/>
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/textViewfName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -43,7 +43,7 @@
     <!-- Laurence Brenner -->
 
     <TextView
-        android:id="@+id/textView13"
+        android:id="@+id/textViewfUnternehmen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -55,7 +55,7 @@
         app:layout_constraintTop_toBottomOf="@id/viewSupporter" />
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textViewfUnternehmenNummer"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -63,8 +63,8 @@
         android:text="@string/konto_fahrer_nummer"
         android:textColor="@color/Grey"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView13"
-        app:layout_constraintStart_toEndOf="@+id/textView13"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewfUnternehmen"
+        app:layout_constraintStart_toEndOf="@+id/textViewfUnternehmen"
         app:layout_constraintTop_toBottomOf="@id/viewSupporter" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ package de.hsh.f4.mc.kbfapp;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -22,13 +23,27 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import static de.hsh.f4.mc.kbfapp.R.id.navHostFragment;
 
 public class FahrerStartseite extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    String uid;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private CollectionReference usersRef = db.collection("users");
+    UserData currentUser;
+    String fName, fUnternehmen, fUnternehmenNummer;
+    TextView textViewfName, textViewfUnternehmen, textViewfUnternehmenNummer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +52,30 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) uid = user.getUid();
+
+        DocumentReference docRef = db.collection("users").document(uid);
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                currentUser = documentSnapshot.toObject(UserData.class);
+                fName = currentUser.getName();
+                fUnternehmen = currentUser.getUnternehmen();
+                fUnternehmenNummer = currentUser.getUnternehmenNummer();
+
+                textViewfName = (TextView) findViewById(R.id.textViewfName);
+                textViewfUnternehmen = (TextView) findViewById(R.id.textViewfUnternehmen);
+                textViewfUnternehmenNummer = (TextView) findViewById(R.id.textViewfUnternehmenNummer);
+
+                fUnternehmenNummer = "#"+ fUnternehmenNummer;
+
+                textViewfName.setText(fName);
+                textViewfUnternehmen.setText(fUnternehmen);
+                textViewfUnternehmenNummer.setText(fUnternehmenNummer);
+            }
+        });
 
         final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
 
@@ -65,6 +104,12 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         });
 
     }
+
+
+
+
+
+
 
     private int getNavHostFragment() {
         return navHostFragment;
