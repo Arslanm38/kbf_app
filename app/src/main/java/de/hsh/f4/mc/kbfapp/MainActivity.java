@@ -173,4 +173,11 @@ public class MainActivity extends AppCompatActivity {
     public void oeffneRegistrierung(View view) {
         startActivity(new Intent(MainActivity.this, Registrierung.class));
     }
+
+
+    public void oeffnePasswortAnfrage(View view) {
+        startActivity(new Intent(MainActivity.this, PasswortAnfrage.class));
+    }
 }
+
+//David Medic
