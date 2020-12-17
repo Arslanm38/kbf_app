@@ -7,6 +7,8 @@
     <!-- Allgemein (mehrmal benutzt) -->
 
     <string name="Einstellungen">Einstellungen</string>
+    <string name="places_api_key">AIzaSyAcOWWtnqtB4X_UyoG6Hy1A_wawCQlhKT4</string>
+    <string name="directions_api_key">AIzaSyCgY6VlLDB7i1ZS5ajmYm9DB35X_ZyBdws</string>
 
     <!-- Login Screen Strings (Fahrer / Unternehmen / Registrierung) -->
 
