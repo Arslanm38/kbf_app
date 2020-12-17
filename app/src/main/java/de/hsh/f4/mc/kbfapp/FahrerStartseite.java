@@ -29,6 +29,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -55,6 +56,9 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
     UserData currentUser;
     String fName, fUnternehmen, fUnternehmenNummer;
     TextView textViewfName, textViewfUnternehmen, textViewfUnternehmenNummer;
+    Location userLocation, userDestination;
+    double userLocationLat, userLocationLng, userDestinationLat, userDestinationLng;
+    MarkerOptions PunktA, PunktB;
 
     private PlacesClient placesClient;
     private FusedLocationProviderClient fusedLocationProviderClient;
@@ -64,6 +68,10 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
     private static final String TAG = FahrerStartseite.class.getSimpleName();
     private final LatLng defaultLocation = new LatLng(52.375, 9.739);
     private static final int DEFAULT_ZOOM = 15;
+    Polyline polylineNF;
+
+    LatLng hannoverHbf;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,7 +160,7 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         updateLocationUI();
         getDeviceLocation();
 
-        LatLng hannoverHbf = new LatLng(52.375, 9.739);
+        hannoverHbf = new LatLng(52.375, 9.739);
         mMap.addMarker(new MarkerOptions().position(hannoverHbf).title("Hannover Hauptbahnhof"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(hannoverHbf));
     }
@@ -179,12 +187,15 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
                     @Override
                     public void onComplete(@NonNull Task<Location> task) {
                         if (task.isSuccessful()) {
-                            // Set the map's camera position to the current location of the device.
                             lastKnownLocation = task.getResult();
                             if (lastKnownLocation != null) {
                                 mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(
                                         new LatLng(lastKnownLocation.getLatitude(),
                                                 lastKnownLocation.getLongitude()), DEFAULT_ZOOM));
+                                userLocation = lastKnownLocation;
+                                userLocationLat = lastKnownLocation.getLatitude();
+                                userLocationLng = lastKnownLocation.getLongitude();
+
                             }
                         } else {
                             Log.d(TAG, "Current location is null. Using defaults.");
@@ -208,7 +219,6 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         locationPermissionGranted = false;
         switch (requestCode) {
             case PERMISSIONS_REQUEST_ACCESS_FINE_LOCATION: {
-                // If request is cancelled, the result arrays are empty.
                 if (grantResults.length > 0
                         && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     locationPermissionGranted = true;
@@ -237,4 +247,24 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         }
     }
 
+    public void onNeueFahrt() {
+
+        PunktA = new MarkerOptions().position(new LatLng(userLocationLat, userLocationLng)).title("Ihre Position");
+        PunktB = new MarkerOptions().position(hannoverHbf).title("Zielpunkt");
+
+        String rUrl = getUrl(PunktA.getPosition(), PunktB.getPosition(), "driving");
+        // Url abrufen
+
+
+    }
+
+    private String getUrl(LatLng origin, LatLng dest, String directionMode) {
+        String str_origin = "origin=" + origin.latitude + "," + origin.longitude;
+        String str_dest = "destination=" + dest.latitude + "," + dest.longitude;
+        String mode = "mode=" + directionMode;
+        String parameters = str_origin + "&" + str_dest + "&" + mode;
+        String output = "json";
+        String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=" + getString(R.string.google_maps_key);
+        return url;
+    }
 }
