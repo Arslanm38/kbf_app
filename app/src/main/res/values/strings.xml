@@ -63,6 +63,7 @@
     <!-- Konto Unternehmer -->
     <string name="konto_unternehmer_name">Max Mustermann</string>
     <string name="konto_unternehmer_unternehmensname">Hallo Taxi</string>
+    <string name="konto_unternehmer_unternehmensnummer">3811</string>
     <string name="title_activity_fahrer_startseite">Map</string>
     <string name="PasswortAnfrage">Passwort vergessen ?</string>
     <string name="PasswortAendern">Bestätigungsmail schicken</string>
