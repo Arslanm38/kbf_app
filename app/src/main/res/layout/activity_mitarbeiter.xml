@@ -32,13 +32,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="hinzufuegeMitarbeiter"
-        android:text="Add" />
+        android:text="Hinzufügen" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="ladeMitarbeiter"
-        android:text="Lade" />
+        android:text="Laden" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
