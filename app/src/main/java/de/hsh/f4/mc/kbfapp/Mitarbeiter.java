@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -43,6 +45,10 @@ public class Mitarbeiter extends AppCompatActivity {
     private EditText editTextName;
     private EditText editTextUnternehmen;
     private TextView textViewName;
+    UserData currentUser;
+    String uid;
+    String fUnternehmen;
+
 
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference usersRef = db.collection("users");
@@ -55,6 +61,19 @@ public class Mitarbeiter extends AppCompatActivity {
         editTextName = findViewById(R.id.editTextName);
         editTextUnternehmen = findViewById(id.editTextUnternehmen);
         textViewName = findViewById(R.id.textViewName);
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) uid = user.getUid();
+
+        DocumentReference docRef = db.collection("users").document(uid);
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                currentUser = documentSnapshot.toObject(UserData.class);
+                fUnternehmen = currentUser.getUnternehmen();
+            }
+        });
+
     }
 
     @Override
@@ -82,6 +101,7 @@ public class Mitarbeiter extends AppCompatActivity {
             }
         });
     }
+
 
     public void hinzufuegeMitarbeiter(View v) {
         String NAME = editTextName.getText().toString();
