@@ -2,19 +2,56 @@
 
 <!-- Erstellt von David Medic-->
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/hintergrund"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context="Mitarbeiter">
 
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/hintergrund" />
+    <EditText
 
-</RelativeLayout>
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="text" />
+
+    <EditText
+
+        android:id="@+id/editTextUnternehmen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Unternehmen"
+        android:inputType="text" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="hinzufuegeMitarbeiter"
+        android:text="Hinzufügen" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="ladeMitarbeiter"
+        android:text="Laden" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
 
 <!-- Erstellt von David Medic-->

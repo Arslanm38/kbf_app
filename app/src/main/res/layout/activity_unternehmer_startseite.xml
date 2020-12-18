@@ -281,7 +281,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/textViewfName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -296,7 +296,7 @@
         android:layout_marginRight="200dp" />
 
     <TextView
-        android:id="@+id/textView9"
+        android:id="@+id/textViewfUnternehmen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="270dp"
@@ -305,7 +305,20 @@
         android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/textViewfName"
+        android:layout_marginRight="270dp" />
+
+    <TextView
+        android:id="@+id/textViewfUnternehmenNummer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="270dp"
+        android:fontFamily="@font/montserrat"
+        android:text="@string/konto_unternehmer_unternehmensnummer"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewfUnternehmen"
         android:layout_marginRight="270dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
