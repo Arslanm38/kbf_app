@@ -15,8 +15,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
@@ -71,43 +73,46 @@ public class Mitarbeiter extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 currentUser = documentSnapshot.toObject(UserData.class);
                 fUnternehmen = currentUser.getUnternehmen();
+
+                // Laurence Brenner
+
+                db.collection("users")
+                        .whereEqualTo("UNTERNEHMEN", fUnternehmen)
+                        .get()
+                        .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                String data = "";
+                                if (task.isSuccessful()) {
+                                    for (QueryDocumentSnapshot document : task.getResult()) {
+                                        MitarbeiterListe mitarbeiterListe2 = document.toObject(MitarbeiterListe.class);
+
+
+                                        String name = mitarbeiterListe2.getName();
+                                        String unternehmen = mitarbeiterListe2.getUnternehmen();
+
+                                        data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+                                    }
+                                } else {
+                                    Log.d(TAG, "Error getting documents: ", task.getException());
+                                }
+
+                                textViewName.setText(data);
+                            }
+                        });
+
+                // /Laurence Brenner
             }
         });
 
     }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        usersRef.addSnapshotListener(this, new EventListener<QuerySnapshot>() {
-            @Override
-            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
-                if (error != null) {
-                    return;
-                }
-
-                String data = "";
-
-                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                    MitarbeiterListe mitarbeiterListe = documentSnapshot.toObject(MitarbeiterListe.class);
-
-                    String name = mitarbeiterListe.getName();
-                    String unternehmen = mitarbeiterListe.getUnternehmen();
-
-                    data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
-                }
-
-                textViewName.setText(data);
-            }
-        });
-    }
-
 
     public void hinzufuegeMitarbeiter(View v) {
         String NAME = editTextName.getText().toString();
         String UNTERNEHMEN = editTextUnternehmen.getText().toString();
 
         Map<String, Object> mitarbeiterListe = new HashMap<>();
+
         mitarbeiterListe.put("NAME", NAME);
         mitarbeiterListe.put("UNTERNEHMEN", UNTERNEHMEN);
 
@@ -115,30 +120,34 @@ public class Mitarbeiter extends AppCompatActivity {
 
     }
 
+    // Laurence Brenner
+
     public void ladeMitarbeiter(View v) {
 
-        usersRef.get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+        db.collection("users")
+                .whereEqualTo("UNTERNEHMEN", fUnternehmen)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         String data = "";
-                        for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                            MitarbeiterListe mitarbeiterListe = documentSnapshot.toObject(MitarbeiterListe.class);
-
-                            String name = mitarbeiterListe.getName();
-                            String unternehmen = mitarbeiterListe.getUnternehmen();
-
-                            data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+                        if (task.isSuccessful()) {
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                MitarbeiterListe mitarbeiterListe2 = document.toObject(MitarbeiterListe.class);
 
 
+                                String name = mitarbeiterListe2.getName();
+                                String unternehmen = mitarbeiterListe2.getUnternehmen();
+
+                                data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+                            }
+                        } else {
+                            Log.d(TAG, "Error getting documents: ", task.getException());
                         }
 
                         textViewName.setText(data);
-
                     }
                 });
-
-
     }
 }
 

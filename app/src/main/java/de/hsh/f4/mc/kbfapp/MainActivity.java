@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (LoginSwitch.isChecked()) {
                     LoginText.setText("Unternehmer-Login");
-                    LoginSwitch.setText("Für Fahrer");
+                    LoginSwitch.setText("Für Unternehmer");
                     LoginButtonFahrer.setVisibility(View.INVISIBLE);
                     LoginButtonUnternehmer.setVisibility(View.VISIBLE);
 
