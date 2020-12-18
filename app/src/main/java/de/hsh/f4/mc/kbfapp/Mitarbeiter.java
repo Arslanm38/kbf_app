@@ -74,7 +74,7 @@ public class Mitarbeiter extends AppCompatActivity {
                 currentUser = documentSnapshot.toObject(UserData.class);
                 fUnternehmen = currentUser.getUnternehmen();
 
-                // Laurence Brenner
+                // mit Laurence Brenner
 
                 db.collection("users")
                         .whereEqualTo("UNTERNEHMEN", fUnternehmen)
@@ -91,7 +91,7 @@ public class Mitarbeiter extends AppCompatActivity {
                                         String name = mitarbeiterListe2.getName();
                                         String unternehmen = mitarbeiterListe2.getUnternehmen();
 
-                                        data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+                                        data += "Name: " + name + "\n" + "Unternehmen: " + unternehmen + "\n\n";
                                     }
                                 } else {
                                     Log.d(TAG, "Error getting documents: ", task.getException());
@@ -101,7 +101,7 @@ public class Mitarbeiter extends AppCompatActivity {
                             }
                         });
 
-                // /Laurence Brenner
+                // /mit Laurence Brenner
             }
         });
 
@@ -120,7 +120,7 @@ public class Mitarbeiter extends AppCompatActivity {
 
     }
 
-    // Laurence Brenner
+    // mit Laurence Brenner
 
     public void ladeMitarbeiter(View v) {
 
@@ -139,7 +139,7 @@ public class Mitarbeiter extends AppCompatActivity {
                                 String name = mitarbeiterListe2.getName();
                                 String unternehmen = mitarbeiterListe2.getUnternehmen();
 
-                                data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+                                data += "Name: " + name + "\n" + "Unternehmen: " + unternehmen + "\n\n";
                             }
                         } else {
                             Log.d(TAG, "Error getting documents: ", task.getException());
@@ -150,5 +150,37 @@ public class Mitarbeiter extends AppCompatActivity {
                 });
     }
 }
+
+    // /mit Laurence Brenner
+
+    /* Hat bei mir dafür gesorgt das alle Mitarbeiter abgerufen wurden, nicht nur die relevanten.
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        usersRef.addSnapshotListener(this, new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
+                if (error != null) {
+                    return;
+                }
+
+                String data = "";
+
+                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                    MitarbeiterListe mitarbeiterListe = documentSnapshot.toObject(MitarbeiterListe.class);
+
+                    String name = mitarbeiterListe.getName();
+                    String unternehmen = mitarbeiterListe.getUnternehmen();
+
+                    data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+                }
+
+                textViewName.setText(data);
+            }
+        });
+    }
+
+    */
 
 /* Erstellt von David Medic*/
