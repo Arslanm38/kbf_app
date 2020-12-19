@@ -79,7 +79,7 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fahrer_startseite);
 
-        Places.initialize(getApplicationContext(), getString(R.string.places_api_key));
+        Places.initialize(getApplicationContext(), getString(R.string.google_maps_key));
         placesClient = Places.createClient(this);
 
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
