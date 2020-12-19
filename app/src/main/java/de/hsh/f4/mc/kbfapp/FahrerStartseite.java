@@ -60,6 +60,7 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
     double userLocationLat, userLocationLng, userDestinationLat, userDestinationLng;
     MarkerOptions PunktA, PunktB;
 
+
     private PlacesClient placesClient;
     private FusedLocationProviderClient fusedLocationProviderClient;
     private Location lastKnownLocation;
