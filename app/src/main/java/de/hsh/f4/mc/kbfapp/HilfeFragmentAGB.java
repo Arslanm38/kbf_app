@@ -1,4 +1,5 @@
 package de.hsh.f4.mc.kbfapp;
+/* Erstellt von David Medic*/
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,3 +13,5 @@ public class HilfeFragmentAGB extends AppCompatActivity {
         setContentView(R.layout.fragment_hilfe_agb);
     }
 }
+
+/* Erstellt von David Medic*/
