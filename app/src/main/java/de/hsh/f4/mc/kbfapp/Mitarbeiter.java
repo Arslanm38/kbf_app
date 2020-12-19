@@ -4,19 +4,13 @@ package de.hsh.f4.mc.kbfapp;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -24,17 +18,15 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
-import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-import static de.hsh.f4.mc.kbfapp.R.*;
+import static de.hsh.f4.mc.kbfapp.R.id;
+import static de.hsh.f4.mc.kbfapp.R.layout;
 
 public class Mitarbeiter extends AppCompatActivity {
 
@@ -155,35 +147,35 @@ public class Mitarbeiter extends AppCompatActivity {
 
     /* Hat bei mir dafür gesorgt das alle Mitarbeiter abgerufen wurden, nicht nur die relevanten.
 
-    /* David Medic
+    /*Erstellt von David Medic*/
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        usersRef.addSnapshotListener(this, new EventListener<QuerySnapshot>() {
-            @Override
-            public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
-                if (error != null) {
-                    return;
-                }
+    //@Override
+    //protected void onStart() {
+       // super.onStart();
+       // usersRef.addSnapshotListener(this, new EventListener<QuerySnapshot>() {
+        //    @Override
+         //   public void onEvent(@Nullable QuerySnapshot queryDocumentSnapshots, @Nullable FirebaseFirestoreException error) {
+          //      if (error != null) {
+              //      return;
+             //   }
 
-                String data = "";
+           //     String data = "";
 
-                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
-                    MitarbeiterListe mitarbeiterListe = documentSnapshot.toObject(MitarbeiterListe.class);
+           //     for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+            //        MitarbeiterListe mitarbeiterListe = documentSnapshot.toObject(MitarbeiterListe.class);
 
-                    String name = mitarbeiterListe.getName();
-                    String unternehmen = mitarbeiterListe.getUnternehmen();
+             //       String name = mitarbeiterListe.getName();
+             //       String unternehmen = mitarbeiterListe.getUnternehmen();
 
-                    data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
-                }
+             //       data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+            //    }
 
-                textViewName.setText(data);
-            }
-        });
-    }
+            //    textViewName.setText(data);
+        //    }
+     //   });
+  //  }
 
-    */
+  /* Erstellt von David Medic*/
 
    // public void ladeMitarbeiter(View v) {
 

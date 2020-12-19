@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KBFApp">
-        <activity android:name=".PasswortAnfrage"></activity>
+        <activity android:name=".Navigation"></activity>
+        <activity android:name=".PasswortAnfrage" />
         <activity android:name=".HilfeFragmentZahlung" />
         <activity android:name=".HilfeFragmentDauer" />
         <activity android:name=".HilfeFragmentKonto" />

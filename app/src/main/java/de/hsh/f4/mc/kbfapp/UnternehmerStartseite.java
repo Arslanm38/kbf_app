@@ -29,6 +29,11 @@ public class UnternehmerStartseite extends AppCompatActivity {
     public void oeffneKontakt(View view)  {
         startActivity(new Intent(UnternehmerStartseite.this, KontaktFragment.class));
     }
+
+    public void oeffneNavigation(View view)  {
+        startActivity(new Intent(UnternehmerStartseite.this, Navigation.class));
+    }
 }
+
 
 /* Erstellt von David Medic*/
