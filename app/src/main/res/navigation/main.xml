@@ -11,7 +11,8 @@
         android:id="@+id/menuProfile"
         android:name="de.hsh.f4.mc.kbfapp.FahrerFragment"
         android:label="Fahrer"
-        tools:layout="@layout/fragment_fahrer" />
+        tools:layout="@layout/fragment_fahrer"
+        android:onClick= "oeffneMeineFahrten"/>
     <fragment
         android:id="@+id/menuNeueFahrt"
         android:name="de.hsh.f4.mc.kbfapp.NeueFahrtFragment"
@@ -34,9 +35,9 @@
         tools:layout="@layout/fragment_kontakt" />
     <fragment
         android:id="@+id/menuMeineFahrten"
-        android:name="de.hsh.f4.mc.kbfapp.LetztenFahrtenFragment"
+        android:name="de.hsh.f4.mc.kbfapp.LetztenFahrten"
         android:label="Meine Fahrten"
-        tools:layout="@layout/fragment_letzten_fahrten" />
+        tools:layout="@layout/activity_letzten_fahrten" />
     <fragment
         android:id="@+id/menuNavi"
         android:name="de.hsh.f4.mc.kbfapp.NaviFragment"
