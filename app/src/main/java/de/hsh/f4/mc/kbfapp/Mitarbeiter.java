@@ -107,6 +107,7 @@ public class Mitarbeiter extends AppCompatActivity {
 
     }
 
+    /*
     public void hinzufuegeMitarbeiter(View v) {
         String NAME = editTextName.getText().toString();
         String UNTERNEHMEN = editTextUnternehmen.getText().toString();
@@ -117,8 +118,8 @@ public class Mitarbeiter extends AppCompatActivity {
         mitarbeiterListe.put("UNTERNEHMEN", UNTERNEHMEN);
 
         usersRef.add(mitarbeiterListe);
-
     }
+    */
 
     // mit Laurence Brenner
 
@@ -155,6 +156,8 @@ public class Mitarbeiter extends AppCompatActivity {
 
     /* Hat bei mir dafür gesorgt das alle Mitarbeiter abgerufen wurden, nicht nur die relevanten.
 
+    /* David Medic
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -182,5 +185,28 @@ public class Mitarbeiter extends AppCompatActivity {
     }
 
     */
+
+   // public void ladeMitarbeiter(View v) {
+
+      //  usersRef.get()
+          //      .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+           //         @Override
+            //        public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+            //            String data = "";
+            //            for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+            //                MitarbeiterListe mitarbeiterListe = documentSnapshot.toObject(MitarbeiterListe.class);
+
+            //                String name = mitarbeiterListe.getName();
+             //               String unternehmen = mitarbeiterListe.getUnternehmen();
+
+              //              data += "Name:" + name + "\n" + "Unternehmen:" + unternehmen + "\n\n";
+
+
+             //           }
+
+               //         textViewName.setText(data);
+
+              //      }
+           //     });
 
 /* Erstellt von David Medic*/

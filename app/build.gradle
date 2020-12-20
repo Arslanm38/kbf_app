@@ -66,4 +66,5 @@ dependencies {
 
     // Firestore
     implementation 'com.google.firebase:firebase-firestore:22.0.0'
+
 }
