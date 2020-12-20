@@ -13,6 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.KBFApp">
         <activity android:name=".UnternehmerFahrten"></activity>
+        <activity android:name=".Einstellungen"></activity>
         <activity android:name=".PasswortAnfrage" />
         <activity android:name=".HilfeFragmentZahlung" />
         <activity android:name=".HilfeFragmentDauer" />
