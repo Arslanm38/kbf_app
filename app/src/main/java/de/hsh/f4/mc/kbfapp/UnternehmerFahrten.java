@@ -19,11 +19,16 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class UnternehmerFahrten extends AppCompatActivity {
 
     String uid, uUnternehmen;
     UserData currentUser;
-    String fUid, fPreis, fName, fData;
+    Timestamp tfZeit;
+    String fData;
     private String TAG;
     private TextView uFahrten;
 
@@ -35,6 +40,7 @@ public class UnternehmerFahrten extends AppCompatActivity {
         setContentView(R.layout.activity_unternehmer_fahrten);
 
         uFahrten = findViewById(R.id.textViewUFahrten);
+        fData = "";
 
         // Nutzer-ID abrufen
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -59,10 +65,16 @@ public class UnternehmerFahrten extends AppCompatActivity {
                                     for (QueryDocumentSnapshot document : task.getResult()) {
                                         FahrtenListe fahrtenListe = document.toObject(FahrtenListe.class);
 
-                                        fUid = fahrtenListe.getFAHRERUID().trim();
-                                        fPreis = fahrtenListe.getPREIS();
+                                        String fUid = fahrtenListe.getFAHRERUID().trim();
+                                        String fPreis = fahrtenListe.getPREIS();
+                                        Timestamp tfZeit = fahrtenListe.getFAHRTANTRITT();
+                                        Date dZeit = new Date();
+                                        dZeit = tfZeit.toDate();
 
-                                        getFahrerName(fUid);
+                                        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm - dd.MM.yyyy");
+                                        String fZeit = dateFormat.format(dZeit);
+
+                                        getFahrerName(fUid, fPreis, fZeit);
 
                                     }
                                 }
@@ -76,30 +88,19 @@ public class UnternehmerFahrten extends AppCompatActivity {
         });
     }
 
-    public void getFahrerName(String fahrerID) {
+    public void getFahrerName(String fahrerID, String fPreis, String fZeit) {
         DocumentReference fahrerRef = db.collection("users").document(fahrerID);
         fahrerRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 currentUser = documentSnapshot.toObject(UserData.class);
-                fName = currentUser.getName();
+                String fName = currentUser.getName();
+                String fUntNmr = currentUser.getUnternehmenNummer();
 
-                fData = "Fahrername: " + fName + "\n" + "Preis: " + fPreis + "\n\n";
+                fData += "Fahrername: " + fName + " - " + fUntNmr + "\n" + "Preis: " + fPreis + "€ |  Uhrzeit: " + fZeit + "\n\n";
 
                 uFahrten.setText(fData);
             }
         });
     }
 }
-
-/*
-
-
-
-
-
-
-
-
-
- */

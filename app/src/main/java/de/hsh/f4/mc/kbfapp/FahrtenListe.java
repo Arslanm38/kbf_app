@@ -8,14 +8,16 @@ public class FahrtenListe {
 
     private String FAHRERUID;
     private String PREIS;
+    private Timestamp FAHRTANTRITT;
 
     public FahrtenListe() {
 
     }
 
-    public FahrtenListe(String FAHRERUID, String PREIS) {
+    public FahrtenListe(String FAHRERUID, String PREIS, Timestamp FAHRTANTRITT) {
         this.FAHRERUID = FAHRERUID;
         this.PREIS = PREIS;
+        this.FAHRTANTRITT = FAHRTANTRITT;
     }
 
     public String getFAHRERUID() {
@@ -26,4 +28,7 @@ public class FahrtenListe {
         return PREIS;
     }
 
+    public Timestamp getFAHRTANTRITT() {
+        return FAHRTANTRITT;
+    }
 }
