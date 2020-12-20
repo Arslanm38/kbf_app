@@ -30,17 +30,17 @@ public class UnternehmerStartseite extends AppCompatActivity {
         startActivity(new Intent(UnternehmerStartseite.this, KontaktFragment.class));
     }
 
-    public void oeffneMeineFahrten(View view) {
-        startActivity(new Intent( UnternehmerStartseite.this, MeineFahrten.class));
+    public void oeffneEinstellungen(View view)  {
+        startActivity(new Intent(UnternehmerStartseite.this, Einstellungen.class));
     }
 
     // Laurence
     public void oeffneFahrten(View view)  {
         startActivity(new Intent(UnternehmerStartseite.this, UnternehmerFahrten.class));
     }
-  
-    public void oeffneEinstellungen(View view)  {
-        startActivity(new Intent(UnternehmerStartseite.this, Einstellungen.class));
+
+    public void oeffneFahrerkonten(View view)   {
+        startActivity(new Intent(UnternehmerStartseite.this, UnternehmerFahrerkonten.class));
     }
 }
 
