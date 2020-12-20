@@ -107,6 +107,7 @@ public class Mitarbeiter extends AppCompatActivity {
 
     }
 
+    /*
     public void hinzufuegeMitarbeiter(View v) {
         String NAME = editTextName.getText().toString();
         String UNTERNEHMEN = editTextUnternehmen.getText().toString();
@@ -117,8 +118,8 @@ public class Mitarbeiter extends AppCompatActivity {
         mitarbeiterListe.put("UNTERNEHMEN", UNTERNEHMEN);
 
         usersRef.add(mitarbeiterListe);
-
     }
+    */
 
     // mit Laurence Brenner
 

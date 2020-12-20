@@ -27,11 +27,13 @@
         android:hint="Unternehmen"
         android:inputType="text" />
 
+    <!--
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="hinzufuegeMitarbeiter"
         android:text="Hinzufügen" />
+    -->
 
     <Button
         android:layout_width="match_parent"
