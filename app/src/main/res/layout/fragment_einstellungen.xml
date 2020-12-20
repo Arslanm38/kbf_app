@@ -1,18 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Erstellt von David Medic-->
 
-<!-- Muhammed Arslan -->
-
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EinstellungenFragment">
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:gravity="top"
+    tools:context=".HilfeFragment">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="80dp"
         android:text="@string/Einstellungen"
-        android:layout_gravity="center"
-        android:textSize="20sp"/>
+        android:textSize="30sp" />
 
-</FrameLayout>
+    <Switch
+        android:id="@+id/switchNight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textrahmen"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Nachtmodus"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/RedPink" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Ortungsdienste"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/RedPink" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Mobiles Netz"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/RedPink" />
+
+    <Switch
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/textrahmen"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Mitteilungen"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="@color/RedPink" />
+
+</LinearLayout>
