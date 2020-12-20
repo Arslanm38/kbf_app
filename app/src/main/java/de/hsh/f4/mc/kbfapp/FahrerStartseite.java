@@ -2,6 +2,7 @@
 
 package de.hsh.f4.mc.kbfapp;
 
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
@@ -268,4 +269,10 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         String url = "https://maps.googleapis.com/maps/api/directions/" + output + "?" + parameters + "&key=" + getString(R.string.google_maps_key);
         return url;
     }
+
+
+    public void oeffneMeineFahrten(View view) {
+        startActivity(new Intent(FahrerStartseite.this, MeineFahrten.class));
+    }
+
 }
