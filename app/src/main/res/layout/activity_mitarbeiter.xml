@@ -11,6 +11,10 @@
     android:padding="16dp"
     tools:context="Mitarbeiter">
 
+
+
+
+    <!--
     <EditText
 
         android:id="@+id/editTextName"
@@ -27,13 +31,19 @@
         android:hint="Unternehmen"
         android:inputType="text" />
 
-    <!--
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="hinzufuegeMitarbeiter"
         android:text="Hinzufügen" />
     -->
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hier werden alle Fahrer ihres Unternehmens angezeigt."
+        android:textSize="20sp"/>
 
     <Button
         android:layout_width="match_parent"

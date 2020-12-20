@@ -60,8 +60,8 @@ public class Mitarbeiter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_mitarbeiter);
 
-        editTextName = findViewById(R.id.editTextName);
-        editTextUnternehmen = findViewById(id.editTextUnternehmen);
+        //editTextName = findViewById(R.id.editTextName);
+        //editTextUnternehmen = findViewById(id.editTextUnternehmen);
         textViewName = findViewById(R.id.textViewName);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
