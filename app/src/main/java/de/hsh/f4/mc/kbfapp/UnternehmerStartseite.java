@@ -42,6 +42,11 @@ public class UnternehmerStartseite extends AppCompatActivity {
     public void oeffneFahrerkonten(View view)   {
         startActivity(new Intent(UnternehmerStartseite.this, UnternehmerFahrerkonten.class));
     }
+
+    // Arslan
+    public void oeffneMeineFahrten(View view) {
+        startActivity(new Intent(UnternehmerStartseite.this, MeineFahrten.class));
+    }
 }
 
 /* Erstellt von David Medic*/
