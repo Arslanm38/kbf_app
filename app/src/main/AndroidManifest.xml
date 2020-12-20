@@ -12,11 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KBFApp">
+        <activity android:name=".UnternehmerFahrerkonten"></activity>
         <activity android:name=".LetztenFahrten" />
         <activity android:name=".LetztenFahrtenFragment" />
         <activity android:name=".MeineFahrten" />
-        <activity android:name=".UnternehmerFahrten"></activity>
-        <activity android:name=".Einstellungen"></activity>
+        <activity android:name=".UnternehmerFahrten" />
+        <activity android:name=".Einstellungen" />
         <activity android:name=".PasswortAnfrage" />
         <activity android:name=".HilfeFragmentZahlung" />
         <activity android:name=".HilfeFragmentDauer" />
