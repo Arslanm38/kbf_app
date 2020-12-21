@@ -275,4 +275,8 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         startActivity(new Intent(FahrerStartseite.this, MeineFahrten.class));
     }
 
+    public void oeffneNavigation(View view) {
+        startActivity(new Intent(FahrerStartseite.this, de.hsh.f4.mc.kbfapp.Navigation.class));
+    }
+
 }
