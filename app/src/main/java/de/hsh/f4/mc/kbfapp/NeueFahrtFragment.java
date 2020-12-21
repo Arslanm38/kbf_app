@@ -1,5 +1,6 @@
 package de.hsh.f4.mc.kbfapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,4 +25,6 @@ public class NeueFahrtFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_neue_fahrt, container, false);
     }
+
+
 }

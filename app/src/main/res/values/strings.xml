@@ -73,6 +73,8 @@
     <string name="PasswortAendern">Bestätigungsmail schicken</string>
     <string name="PasswortZuruecksenden">Passwort zurücksetzen</string>
     <string name="loginWithNewPassword">Loggen Sie sich ein</string>
+    <string name="_10_12_2020_10_38_name_mustermann">10.12.2020 10:38 Name: Mustermann</string>
+    <string name="todo">TODO</string>
 
 
 </resources>

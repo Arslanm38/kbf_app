@@ -52,8 +52,8 @@ public class Mitarbeiter extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layout.activity_mitarbeiter);
 
-        editTextName = findViewById(R.id.editTextName);
-        editTextUnternehmen = findViewById(id.editTextUnternehmen);
+        //editTextName = findViewById(R.id.editTextName);
+        //editTextUnternehmen = findViewById(id.editTextUnternehmen);
         textViewName = findViewById(R.id.textViewName);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -99,6 +99,7 @@ public class Mitarbeiter extends AppCompatActivity {
 
     }
 
+    /*
     public void hinzufuegeMitarbeiter(View v) {
         String NAME = editTextName.getText().toString();
         String UNTERNEHMEN = editTextUnternehmen.getText().toString();
@@ -109,8 +110,8 @@ public class Mitarbeiter extends AppCompatActivity {
         mitarbeiterListe.put("UNTERNEHMEN", UNTERNEHMEN);
 
         usersRef.add(mitarbeiterListe);
-
     }
+    */
 
     // mit Laurence Brenner
 

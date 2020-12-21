@@ -7,8 +7,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hintergrund"
-    tools:context="de.hsh.f4.mc.kbfapp.Registrierung" >
+    tools:context="de.hsh.f4.mc.kbfapp.Registrierung">
 
     <TextView
         android:id="@+id/textView"

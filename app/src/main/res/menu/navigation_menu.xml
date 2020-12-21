@@ -6,7 +6,7 @@
     <item
         android:id="@+id/menuProfile"
         android:icon="@drawable/ic_f_person"
-        android:title="@string/Fahrer"/>
+        android:title="@string/Fahrer" />
     <item
         android:id="@+id/menuNeueFahrt"
         android:icon="@drawable/ic_f_taxi"
