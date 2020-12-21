@@ -30,6 +30,9 @@ public class UnternehmerStartseite extends AppCompatActivity {
         startActivity(new Intent(UnternehmerStartseite.this, KontaktFragment.class));
     }
 
+    public void oeffneNavigation(View view)  {
+        startActivity(new Intent(UnternehmerStartseite.this, Navigation.class));
+
     public void oeffneEinstellungen(View view)  {
         startActivity(new Intent(UnternehmerStartseite.this, Einstellungen.class));
     }
@@ -48,5 +51,6 @@ public class UnternehmerStartseite extends AppCompatActivity {
         startActivity(new Intent(UnternehmerStartseite.this, MeineFahrten.class));
     }
 }
+
 
 /* Erstellt von David Medic*/
