@@ -7,8 +7,8 @@
     <!-- Allgemein (mehrmal benutzt) -->
 
     <string name="Einstellungen">Einstellungen</string>
-    <string name="places_api_key">AIzaSyAcOWWtnqtB4X_UyoG6Hy1A_wawCQlhKT4</string>
-    <string name="directions_api_key">AIzaSyCgY6VlLDB7i1ZS5ajmYm9DB35X_ZyBdws</string>
+    <string name="places_api_key">AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y</string>
+    <string name="directions_api_key">AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y</string>
 
     <!-- Login Screen Strings (Fahrer / Unternehmen / Registrierung) -->
 
@@ -75,6 +75,7 @@
     <string name="loginWithNewPassword">Loggen Sie sich ein</string>
     <string name="_10_12_2020_10_38_name_mustermann">10.12.2020 10:38 Name: Mustermann</string>
     <string name="todo">TODO</string>
+    <string name="title_activity_maps">Map</string>
 
 
 </resources>

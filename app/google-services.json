@@ -7,7 +7,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1077054657570:android:e79c7c37be399269aae67b",
+        "mobilesdk_app_id": "1:1077054657570:android:79843bf95d0bcef6aae67b",
         "android_client_info": {
           "package_name": "de.hsh.f4.mc.kbfapp"
         }
@@ -20,7 +20,7 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD-TaZqF8NZQf2karMmiYRJhDyRwtVE570"
+          "current_key": "AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y"
         }
       ],
       "services": {
