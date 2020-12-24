@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Erstellt von David Medic-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Navigation">
+
+    <EditText
+        android:id="@+id/et_startpunkt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/textrahmen_transparent"
+        android:hint="Gib den Startpunkt ein."
+        android:padding="12dp" />
+
+    <EditText
+        android:id="@+id/et_zielpunkt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/textrahmen_transparent"
+        android:hint="Gib den Zielpunkt ein."
+        android:padding="12dp" />
+
+    <Button
+        android:id="@+id/button_route"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Zielführung" />
+
+
+</LinearLayout>
+
+    <!-- Erstellt von David Medic-->
