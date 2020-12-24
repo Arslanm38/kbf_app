@@ -1,33 +1,45 @@
 <resources>
 
+    <string name="app_name">KBF App</string>
+
     <!-- Laurence Brenner -->
 
-    <string name="app_name">KBF App</string>
+    <!-- API Keys -->
+
+    <string name="places_api_key">AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y</string>
+    <string name="directions_api_key">AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y</string>
 
     <!-- Allgemein (mehrmal benutzt) -->
 
     <string name="Einstellungen">Einstellungen</string>
-    <string name="places_api_key">AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y</string>
-    <string name="directions_api_key">AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y</string>
+    <string name="KBF_Logo">KBF Logo</string>
 
     <!-- Login Screen Strings (Fahrer / Unternehmen / Registrierung) -->
+    <string name="LoginFürUnternehmer">Für Unternehmer</string>
 
-    <string name="UnternehmerLogin">Unternehmer-Login</string>
-    <string name="FahrerLogin">Fahrer-Login</string>
-    <string name="Anmelden">Anmelden</string>
-    <string name="Email">E-Mail</string>
-    <string name="Passwort">Passwort</string>
-    <string name="RegistrierungAnfrage">Noch kein Mitglied ? Registrieren Sie sich !</string>
+    <string name="LoginUnternehmerLogin">Unternehmer-Login</string>
+    <string name="LoginFahrerLogin">Fahrer-Login</string>
+
+    <string name="LoginAnmelden">Anmelden</string>
+    <string name="LoginRegistrierung">Noch kein Mitglied ? Registrieren Sie sich !</string>
+    <string name="LoginPasswortVergessen">Passwort vergessen ?</string>
 
     <string name="Registrierung">Registrierung</string>
+    <string name="Registrieren">Registrieren</string>
+    <string name="backToLogin">Schon Mitglied ? Loggen Sie sich ein</string>
+
+
+    <string name="Email">E-Mail</string>
+    <string name="Passwort">Passwort</string>
+
+    <string name="Unternehmerkonto">Unternehmerkonto</string>
+    <string name="Fahrerkonto">Fahrerkonto</string>
     <string name="Reg_VorUndNachname">Vor- und Nachname</string>
     <string name="Reg_StraßeHausnummer">Straße (mit Hausnummer)</string>
     <string name="Reg_Postleitzahl">Postleitzahl</string>
     <string name="Reg_PasswortBestaetigen">Passwort bestätigen</string>
-    <string name="Registrieren">Registrieren</string>
-    <string name="backToLogin">Schon Mitglied ? Loggen Sie sich ein</string>
-    <string name="Unternehmerkonto">Unternehmerkonto</string>
-    <string name="Fahrerkonto">Fahrerkonto</string>
+
+    <!-- /Laurence Brenner -->
 
     <!-- Unternehmerstartseite -->
 
@@ -69,7 +81,6 @@
     <string name="konto_unternehmer_unternehmensname">Hallo Taxi</string>
     <string name="konto_unternehmer_unternehmensnummer">3811</string>
     <string name="title_activity_fahrer_startseite">Map</string>
-    <string name="PasswortAnfrage">Passwort vergessen ?</string>
     <string name="PasswortAendern">Bestätigungsmail schicken</string>
     <string name="PasswortZuruecksenden">Passwort zurücksetzen</string>
     <string name="loginWithNewPassword">Loggen Sie sich ein</string>
