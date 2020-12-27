@@ -10,7 +10,7 @@
     tools:context="de.hsh.f4.mc.kbfapp.PasswortAnfrage" >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewToLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="64dp"
@@ -29,9 +29,10 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
         android:fontFamily="@font/montserrat"
+        android:backgroundTint="@color/White"
         android:text="@string/PasswortAendern"
         android:textColor="@color/Orange"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toTopOf="@+id/textViewToLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -56,7 +57,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/emaiL_angabe"
+                android:id="@+id/email_angabe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -64,7 +65,8 @@
                 android:fontFamily="@font/montserrat"
                 android:hint="@string/Email"
                 android:inputType="textEmailAddress"
-                android:padding="12dp" />
+                android:padding="12dp"
+                android:autofillHints="E-Mail" />
 
 
         </LinearLayout>
@@ -92,7 +94,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_kbf" />
+        app:srcCompat="@drawable/logo_kbf"
+        android:contentDescription="@string/KBF_Logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
