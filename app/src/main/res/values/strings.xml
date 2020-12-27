@@ -2,8 +2,6 @@
 
     <string name="app_name">KBF App</string>
 
-    <!-- Laurence Brenner -->
-
     <!-- API Keys -->
 
     <string name="places_api_key">AIzaSyBFBxngZf2dx1CXSXpYbh-_fPNnDDRGR9Y</string>
@@ -26,7 +24,7 @@
 
     <string name="Registrierung">Registrierung</string>
     <string name="Registrieren">Registrieren</string>
-    <string name="backToLogin">Schon Mitglied ? Loggen Sie sich ein</string>
+    <string name="RegToLogin">Schon Mitglied ? Loggen Sie sich ein</string>
 
 
     <string name="Email">E-Mail</string>
@@ -38,8 +36,6 @@
     <string name="Reg_StraßeHausnummer">Straße (mit Hausnummer)</string>
     <string name="Reg_Postleitzahl">Postleitzahl</string>
     <string name="Reg_PasswortBestaetigen">Passwort bestätigen</string>
-
-    <!-- /Laurence Brenner -->
 
     <!-- Unternehmerstartseite -->
 

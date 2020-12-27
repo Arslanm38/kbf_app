@@ -27,7 +27,7 @@ public class PasswortAnfrage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_passwort_anfrage);
-        userEmail = findViewById(R.id.emaiL_angabe);
+        userEmail = findViewById(R.id.email_angabe);
         sendEmail = findViewById(R.id.sende_email);
         mAuth = FirebaseAuth.getInstance();
         sendEmail.setOnClickListener(new View.OnClickListener() {
