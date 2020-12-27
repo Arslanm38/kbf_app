@@ -43,7 +43,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import static de.hsh.f4.mc.kbfapp.R.id.navHostFragment;
 
 public class FahrerStartseite extends FragmentActivity implements OnMapReadyCallback {
 
@@ -87,73 +86,12 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
-
-
-
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) uid = user.getUid();
-
-        DocumentReference docRef = db.collection("users").document(uid);
-        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-                currentUser = documentSnapshot.toObject(UserData.class);
-                fName = currentUser.getName();
-                fUnternehmen = currentUser.getUnternehmen();
-                fUnternehmenNummer = currentUser.getUnternehmenNummer();
-
-                textViewfName = (TextView) findViewById(R.id.textViewfName);
-                textViewfUnternehmen = (TextView) findViewById(R.id.textViewfUnternehmen);
-                textViewfUnternehmenNummer = (TextView) findViewById(R.id.textViewfUnternehmenNummer);
-
-                fUnternehmenNummer = "#"+ fUnternehmenNummer;
-
-                textViewfName.setText(fName);
-                textViewfUnternehmen.setText(fUnternehmen);
-                textViewfUnternehmenNummer.setText(fUnternehmenNummer);
-            }
-        });
-
-        // /Laurence Brenner
-
-        // David Medic
-
-        final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
-
-        //Die Leiste oben auf der Fahrerstartseite wurde weggemacht
-        //findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
-           // @Override
-         //   public void onClick(View view) {
-        //        drawerLayout.openDrawer(GravityCompat.START);
-
-        //    }
-    //    });
-
-        NavigationView navigationView = findViewById(R.id.navigationView);
-        navigationView.setItemIconTintList(null);
-
-
-        NavController navController = Navigation.findNavController(this, getNavHostFragment());
-        NavigationUI.setupWithNavController(navigationView, navController);
-
-        //final TextView textTitle = findViewById(R.id.textTitle);
-
-        navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
-            @Override
-            public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                //textTitle.setText(destination.getLabel());
-            }
-        });
     }
 
     // Laurence Brenner
 
 
 
-    private int getNavHostFragment() {
-        return navHostFragment;
-
-    }
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
