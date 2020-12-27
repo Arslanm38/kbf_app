@@ -14,7 +14,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
 import androidx.navigation.NavController;
@@ -121,13 +120,14 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
 
         final DrawerLayout drawerLayout = findViewById(R.id.drawerLayout);
 
-        findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawerLayout.openDrawer(GravityCompat.START);
+        //Die Leiste oben auf der Fahrerstartseite wurde weggemacht
+        //findViewById(R.id.imageMenu).setOnClickListener(new View.OnClickListener() {
+           // @Override
+         //   public void onClick(View view) {
+        //        drawerLayout.openDrawer(GravityCompat.START);
 
-            }
-        });
+        //    }
+    //    });
 
         NavigationView navigationView = findViewById(R.id.navigationView);
         navigationView.setItemIconTintList(null);
@@ -136,12 +136,12 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         NavController navController = Navigation.findNavController(this, getNavHostFragment());
         NavigationUI.setupWithNavController(navigationView, navController);
 
-        final TextView textTitle = findViewById(R.id.textTitle);
+        //final TextView textTitle = findViewById(R.id.textTitle);
 
         navController.addOnDestinationChangedListener(new NavController.OnDestinationChangedListener() {
             @Override
             public void onDestinationChanged(@NonNull NavController controller, @NonNull NavDestination destination, @Nullable Bundle arguments) {
-                textTitle.setText(destination.getLabel());
+                //textTitle.setText(destination.getLabel());
             }
         });
     }
