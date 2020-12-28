@@ -9,6 +9,8 @@ import android.widget.Switch;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
+//David Medic
+
 public class Einstellungen extends AppCompatActivity {
 
     private Switch nightmodeSwitch;
@@ -62,5 +64,6 @@ public class Einstellungen extends AppCompatActivity {
         }
     }
 
-
 }
+
+//David Medic

@@ -10,21 +10,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentActivity;
-import androidx.navigation.NavController;
-import androidx.navigation.NavDestination;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -40,8 +33,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.net.PlacesClient;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
@@ -49,8 +40,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
 
 public class FahrerStartseite extends FragmentActivity implements OnMapReadyCallback {
@@ -85,12 +74,40 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
 
     LatLng hannoverHbf;
 
+    public boolean istFahrer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_fahrer_startseite);
+
+        //David Medic
+        //Nur Fahrer haben Zugriff auf die Fahrerstartseite (Überprüfung, ob  man der Fahrer ist)
+
+        FirebaseUser fahrer = FirebaseAuth.getInstance().getCurrentUser();
+        if (fahrer != null) uid = fahrer.getUid();
+
+        DocumentReference docRefs = db.collection("users").document(uid);
+        docRefs.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                currentUser = documentSnapshot.toObject(UserData.class);
+                istFahrer = currentUser.getIstFahrer();
+
+                if (istFahrer != false) {
+
+                    Toast.makeText(FahrerStartseite.this, "Erfolgreich als Fahrer angemeldet", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(FahrerStartseite.this, "Sie sind kein Fahrer", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(FahrerStartseite.this, MainActivity.class));
+                }
+            }
+        });
+
+        //David Medic
 
         Places.initialize(getApplicationContext(), getString(R.string.google_maps_key));
         placesClient = Places.createClient(this);
