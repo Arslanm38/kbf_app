@@ -2,13 +2,18 @@
 
 package de.hsh.f4.mc.kbfapp;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -35,6 +40,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.libraries.places.api.Places;
 import com.google.android.libraries.places.api.net.PlacesClient;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,22 +48,29 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
 
 
 public class FahrerStartseite extends FragmentActivity implements OnMapReadyCallback {
 
-    // Laurence Brenner
+    // Laurence Brenner (mit David Medic)
 
     private GoogleMap mMap;
     String uid;
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference usersRef = db.collection("users");
     UserData currentUser;
-    String fName, fUnternehmen, fUnternehmenNummer;
+    String KbfScheinID;
     TextView textViewfName, textViewfUnternehmen, textViewfUnternehmenNummer;
     Location userLocation, userDestination;
     double userLocationLat, userLocationLng, userDestinationLat, userDestinationLng;
     MarkerOptions PunktA, PunktB;
+    EditText KBFid;
+    KbfSchein userSchein;
+    GeoPoint userStart, userZiel;
+    String sStartLat, sStartLng, sZielLat, sZielLng;
 
 
     private PlacesClient placesClient;
@@ -76,6 +89,7 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_fahrer_startseite);
 
         Places.initialize(getApplicationContext(), getString(R.string.google_maps_key));
@@ -88,10 +102,6 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         mapFragment.getMapAsync(this);
     }
 
-    // Laurence Brenner
-
-
-
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
@@ -99,10 +109,62 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         getLocationPermission();
         updateLocationUI();
         getDeviceLocation();
+    }
 
-        hannoverHbf = new LatLng(52.375, 9.739);
-        mMap.addMarker(new MarkerOptions().position(hannoverHbf).title("Hannover Hauptbahnhof"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(hannoverHbf));
+
+    public void onKBFid(View v) {
+        KBFid = findViewById(R.id.editTextTextKBFid);
+        KbfScheinID = KBFid.getText().toString().trim();
+        KBFid.setText(null);
+
+        DocumentReference docRef = db.collection("kbfschein").document(KbfScheinID);
+        docRef.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                userSchein = documentSnapshot.toObject(KbfSchein.class);
+                sStartLat = userSchein.getZIELLAT();
+                sStartLng = userSchein.getZIELLNG();
+
+                getDeviceLocation();
+
+                sZielLat = String.valueOf(userLocation.getLatitude());
+                sZielLng = String.valueOf(userLocation.getLongitude());
+
+                String sStart = sStartLat + "," + sStartLng;
+                String sZiel = sZielLat + "," + sZielLng;
+
+                Toast.makeText(FahrerStartseite.this, sStart + "-------" + sZiel, Toast.LENGTH_SHORT).show();
+
+
+
+                try {
+                    //Wenn Google Map installiert ist
+                    Uri uri = Uri.parse("https://www.google.de/maps/dir/" + sStart + "/" + sZiel);
+
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+                    intent.setPackage("com.google.android.apps.maps");
+
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    startActivity(intent);
+
+                }catch (ActivityNotFoundException e) {
+                    //Wenn google maps nicht installiert wurde
+                    Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
+
+                    Intent intent = new Intent(Intent.ACTION_VIEW,uri);
+
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                    startActivity(intent);
+
+                }
+            }
+        });
+
+
+
     }
 
 
@@ -193,9 +255,6 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
         PunktB = new MarkerOptions().position(hannoverHbf).title("Zielpunkt");
 
         String rUrl = getUrl(PunktA.getPosition(), PunktB.getPosition(), "driving");
-        // Url abrufen
-
-
     }
 
     private String getUrl(LatLng origin, LatLng dest, String directionMode) {
@@ -211,10 +270,6 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
 
     public void oeffneMeineFahrten(View view) {
         startActivity(new Intent(FahrerStartseite.this, MeineFahrten.class));
-    }
-
-    public void oeffneNavigation(View view) {
-        startActivity(new Intent(FahrerStartseite.this, de.hsh.f4.mc.kbfapp.Navigation.class));
     }
 
 }
