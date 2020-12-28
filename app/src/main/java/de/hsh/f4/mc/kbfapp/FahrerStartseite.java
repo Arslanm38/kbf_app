@@ -122,51 +122,51 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 userSchein = documentSnapshot.toObject(KbfSchein.class);
-                sStartLat = userSchein.getZIELLAT();
-                sStartLng = userSchein.getZIELLNG();
 
                 getDeviceLocation();
-
-                sZielLat = String.valueOf(userLocation.getLatitude());
-                sZielLng = String.valueOf(userLocation.getLongitude());
-
-                String sStart = sStartLat + "," + sStartLng;
-                String sZiel = sZielLat + "," + sZielLng;
-
-                Toast.makeText(FahrerStartseite.this, sStart + "-------" + sZiel, Toast.LENGTH_SHORT).show();
-
-
-
-                try {
-                    //Wenn Google Map installiert ist
-                    Uri uri = Uri.parse("https://www.google.de/maps/dir/" + sStart + "/" + sZiel);
-
-                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-
-                    intent.setPackage("com.google.android.apps.maps");
-
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-                    startActivity(intent);
-
-                }catch (ActivityNotFoundException e) {
-                    //Wenn google maps nicht installiert wurde
-                    Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
-
-                    Intent intent = new Intent(Intent.ACTION_VIEW,uri);
-
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-
-                    startActivity(intent);
-
-                }
             }
         });
 
+        if (userSchein != null) {
+            sZielLat = String.valueOf(userLocation.getLatitude());
+            sZielLng = String.valueOf(userLocation.getLongitude());
+
+            sStartLat = userSchein.getZIELLAT();
+            sStartLng = userSchein.getZIELLNG();
+
+            String sStart = sStartLat + "," + sStartLng;
+            String sZiel = sZielLat + "," + sZielLng;
+
+            Toast.makeText(FahrerStartseite.this, sStart + "-------" + sZiel, Toast.LENGTH_SHORT).show();
 
 
-    }
+            try {
+                //Wenn Google Map installiert ist
+                Uri uri = Uri.parse("https://www.google.de/maps/dir/" + sStart + "/" + sZiel);
 
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+                intent.setPackage("com.google.android.apps.maps");
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                startActivity(intent);
+
+            } catch (ActivityNotFoundException e) {
+                //Wenn google maps nicht installiert wurde
+                Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                startActivity(intent);
+            }
+        }
+            else {
+                Toast.makeText(FahrerStartseite.this, "KBF-Schein existiert nicht", Toast.LENGTH_SHORT).show();
+            }
+        }
 
 
     private void getLocationPermission() {
