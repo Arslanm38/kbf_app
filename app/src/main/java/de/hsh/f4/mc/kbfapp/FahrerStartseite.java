@@ -55,7 +55,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 public class FahrerStartseite extends FragmentActivity implements OnMapReadyCallback {
 
-    // Laurence Brenner (mit David Medic)
+    // Laurence Brenner
 
     private GoogleMap mMap;
     String uid;
@@ -139,6 +139,7 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
 
             Toast.makeText(FahrerStartseite.this, sStart + "-------" + sZiel, Toast.LENGTH_SHORT).show();
 
+            //mit David Medic
 
             try {
                 //Wenn Google Map installiert ist
@@ -162,6 +163,9 @@ public class FahrerStartseite extends FragmentActivity implements OnMapReadyCall
 
                 startActivity(intent);
             }
+
+            // /mit David Medic
+
         }
             else {
                 Toast.makeText(FahrerStartseite.this, "KBF-Schein existiert nicht", Toast.LENGTH_SHORT).show();
